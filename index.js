@@ -205,7 +205,40 @@ function letterGrade(mark) {
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
+const won = "You won!"
+const lost = "You lost!"
+const tied = "You tied, play again!"
 
+function rockPaperScissors(choice) {
+  player2 = Math.round(Math.random()*3);
+  if (choice === player2){
+    return (tied);
+  } 
+  else if (player2 - choice === 1) {
+    return (lost);
+  } 
+  else if (player2 - choice === 2) {
+    return (won);
+  }
+  else if (player2 - choice === -1) {
+    return (won);
+  }
+  else if (player2 - choice === -2) {
+    return (lost);
+  }
+};
+
+let userChoice = prompt("rock, paper or scissors?");
+
+if (userChoice === 'rock') {
+  userChoice = 1;
+} else if (userChoice === 'paper') {
+  userChoice = 2;
+} else {
+  userChoice = 3;
+};
+
+rockPaperScissors(userChoice)
 
 
 
