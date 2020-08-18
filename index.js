@@ -93,7 +93,42 @@ function dogFeeder(weight,age) {
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+// if choice is equal to player 2 then tied
+// if choice is 1 and player2 is 2 then lost
+// if choice is 1 and player2 is 3 then won
+// if choice is 2 and player2 is 1 then won
+// if choice is 2 and player2 is 3 then lost
+// if choice is 3 and player2 is 2 then won
+// if choice is 3 and player2 is 1 then lost
+
+
+const rock = 1;
+const paper = 2;
+const scissors = 3;
+const won = "You won!"
+const lost = "You lost!"
+const tied = "You tied, play again!"
+
+function rockPaperScissors(choice) {
+  player2 = Math.round(Math.random()*3);
+  if (choice === player2){
+    return (tied);
+  } 
+  else if (player2 - choice === 1) {
+    return (lost);
+  } 
+  else if (player2 - choice === 2) {
+    return (won);
+  }
+  else if (player2 - choice === -1) {
+    return (won);
+  }
+  else if (player2 - choice === -2) {
+    return (lost);
+  }
+};
+
+
   
 
 /************************************************************** Task 5 **************************************************************/
