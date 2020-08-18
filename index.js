@@ -1,25 +1,37 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+const votingAge = 23;
 
+if (votingAge > 18) {
+    console.log(true);
+}
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let myVar = 3;
+const myVar2 = 8;
 
 
-
+if (myVar < myVar2) {
+    myVar = myVar + myVar2;
+} else {
+    myVar = myVar2;
+};
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+Number("1999")
 
 
 
 //Task d: Write a function to multiply a*b 
 
-
+function multiply(a,b) {
+    return (a*b);
+}
 
 
 
@@ -27,7 +39,9 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
+function dogYears(age) {
+    return (age * 7);
+}
 
 
 
@@ -50,8 +64,27 @@
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
 
-
-
+function dogFeeder(weight,age) {
+    if (age >= 1) {
+        if (weight <= 5) {
+            return (weight * 0.05);
+        } else if (weight > 5 && weight <= 10) {
+            return (weight * 0.04);
+        } else if (weight > 10 && weight <= 15) {
+            return (weight * 0.03);
+        } else if (weight > 15) {
+            return (weight * 0.02)
+        }
+        } else {
+        if (age > 2/12 && age <= 4/12) {
+            return (weight * 0.10);
+        } else if (age > 4/12 && age <= 7/12){
+            return(weight * 0.05);
+        } else if (age > 7/12 && age < 1){
+            return(weight * 0.04);
+        }
+        }
+}
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
