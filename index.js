@@ -175,9 +175,21 @@ function annoyingSong(times) {
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
 
-  
+function letterGrade(mark) {
+    if (mark > 90) {
+      return "A";
+    } else if (mark < 90 && mark >= 80) {
+      return "B";
+    } else if (mark >= 70 && mark < 80) {
+      return "C";
+    } else if (mark >= 60 && mark < 70) {
+      return "D";
+    } else if (mark < 60) {
+      return "F";
+    }
+  };
+
   
 
 /************************************************************** Stretch **************************************************************/
