@@ -154,9 +154,17 @@ const ftToCM = (ft) => (ft*30.48);
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
+
+const part1 = " bottles of soda on the wall, ";
+const part2 = " bottles of soda, take one down pass it around ";
+const part3 = " bottles of soda on the wall";
 
 
+function annoyingSong(times) {
+  for(i = times; i>0; i--){
+    console.log(i + part1 + i + part2 + (i-1) + part3)
+  }
+};
 
 
 /************************************************************** Task 7 **************************************************************/
