@@ -197,7 +197,18 @@ function letterGrade(mark) {
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
+const vowels = ['a','e','i','o','u'];
 
+let count = 0;
+
+function countVowels(sentence) {
+  for (var i = 0; i < sentence.length; i++){
+  if (vowels.includes(sentence.toLowerCase()[i])) {
+    count++;
+  }
+  }
+  return count;
+};
 
 
 
