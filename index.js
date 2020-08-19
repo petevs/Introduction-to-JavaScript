@@ -177,7 +177,7 @@ function annoyingSong(times) {
 //and anything below 60 should be F
 
 function letterGrade(mark) {
-    if (mark > 90) {
+    if (mark >= 90) {
       return "A";
     } else if (mark < 90 && mark >= 80) {
       return "B";
@@ -199,9 +199,8 @@ function letterGrade(mark) {
 
 const vowels = ['a','e','i','o','u'];
 
-let count = 0;
-
 function countVowels(sentence) {
+  let count = 0;
   for (var i = 0; i < sentence.length; i++){
   if (vowels.includes(sentence.toLowerCase()[i])) {
     count++;
